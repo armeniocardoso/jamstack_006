@@ -64,3 +64,9 @@ input[type=text], input[type=email], select, textarea {
     background-color: #f2f2f2;
     padding: 20px;
   }
+
+  .erro {
+    color: red;
+    display: block;
+    text-align: right;
+  }

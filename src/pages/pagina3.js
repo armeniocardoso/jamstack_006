@@ -34,10 +34,10 @@ const Pagina3 = () => {
             Nome
             <input type="text" name="nome" {...register("nome", { required: true, maxLength: 20 })} />
             {errors.nome && errors.nome.type === "required" && (
-              <span>&nbsp;Nome é obrigatório.</span>
+              <span className="erro">&nbsp;Nome é obrigatório.</span>
             )}
             {errors.nome && errors.nome.type === "maxLength" && (
-              <span>&nbsp;Nome pode ter 20 caracteres no máximo.</span>
+              <span className="erro">&nbsp;Nome pode ter 20 caracteres no máximo.</span>
             )}
           </label>
           <label>
@@ -47,17 +47,17 @@ const Pagina3 = () => {
               pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             })} />
             {errors.email && errors.email.type === "required" && (
-              <span>&nbsp;Email é obrigatório.</span>
+              <span className="erro">&nbsp;Email é obrigatório.</span>
             )}
             {errors.email && errors.email.type === "pattern" && (
-              <span>&nbsp;Email inválido.</span>
+              <span className="erro">&nbsp;Email inválido.</span>
             )}
           </label>
           <label>
             Assunto
             <input type="text" name="assunto" {...register("assunto", { required: true, maxLength: 100 })} />
-            {errors.nome && errors.nome.type === "maxLength" && (
-              <span>&nbsp;Nome pode ter 100 caracteres no máximo.</span>
+            {errors.assunto && errors.assunto.type === "maxLength" && (
+              <span className="erro">&nbsp;Assunto pode ter 100 caracteres no máximo.</span>
             )}
           </label>
           <label>
