@@ -24,9 +24,10 @@ const Pagina2 = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "form_react", ...inputs })
-    })
-      .then(() => alert("Sucesso!"))
-      .catch(error => alert(error));
+    }).then(() => {
+      alert("Em breve daremos um retorno do seu contato. Obrigado!");
+      setInputs({ nome: "", email: "", assunto: "", mensagem: "" });
+    }).catch(error => alert(error));
   };
 
   return (
