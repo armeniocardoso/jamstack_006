@@ -36,6 +36,7 @@ const Pagina2 = () => {
       <div className="container">
         <form method="post" onSubmit={handleSubmit}
           data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="form_react" />
           <label>
             Nome
             <input type="text" name="nome" value={inputs.nome} onChange={handleChange} />
