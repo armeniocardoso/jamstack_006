@@ -6,7 +6,8 @@ const IndexPage = () => {
     <Layout>
       <h2>Entre em Contato:</h2>
       <div className="container">
-        <form name="form_estatico" method="post"  netlify>
+        <form name="form_estatico" method="post">
+          <input type="hidden" name="form-name" value="form_estatico" />
           <label>
             Nome
             <input type="text" name="nome" />
