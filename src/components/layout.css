@@ -48,7 +48,6 @@ input[type=text], input[type=email], select, textarea {
     resize: vertical;
   }
   
-  /* Style the submit button with a specific background color etc */
   input[type=submit], input[type=reset] {
     background-color: #04AA6D;
     color: white;
@@ -65,4 +64,3 @@ input[type=text], input[type=email], select, textarea {
     background-color: #f2f2f2;
     padding: 20px;
   }
-  

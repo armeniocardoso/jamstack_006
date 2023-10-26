@@ -11,6 +11,7 @@ export default function Layout({ children }) {
                 <nav className="topnav">
                     <Link to="/">Início</Link>
                     <Link to="/pagina1">Formulário Estático</Link>
+                    <Link to="/pagina2">Formulário React</Link>
                 </nav>
             </div>
             <div className="main">

@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 
-const IndexPage = () => {
+const Pagina1 = () => {
   return (
     <Layout>
       <h2>Entre em Contato:</h2>
@@ -32,6 +32,6 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Pagina1
 
-export const Head = () => <title>Início</title>
+export const Head = () => <title>Formulário Estático</title>
