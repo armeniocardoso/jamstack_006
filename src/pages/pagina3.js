@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 const Pagina3 = () => {
 
-  const { register, handleSubmit, formState: { errors }} = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const encode = (data) => {
     return Object.keys(data)
@@ -16,21 +16,19 @@ const Pagina3 = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "form_react_form", ...dados })
+      body: encode({ "form-name": "form_react_form", ...dados })      
     }).then(() => {
-      alert("Em breve daremos um retorno do seu contato. Obrigado!");      
+      alert("Em breve daremos um retorno do seu contato. Obrigado!");
     }).catch(error => alert(error));
-    console.log(encode({ "form-name": "form_react_form", ...dados }));
+    reset();
   };
 
   return (
     <Layout>
       <h2>Entre em Contato:</h2>
       <div className="container">
-        <form name="form_react" method="post" onSubmit={handleSubmit(onSubmit)}
+        <form method="post" onSubmit={handleSubmit(onSubmit)}
           data-netlify="true" data-netlify-honeypot="bot-field">
-
-          <input type="hidden" name="form-name" value="form_estatico" />
           <label>
             Nome
             <input type="text" name="nome" {...register("nome", { required: true, maxLength: 20 })} />
