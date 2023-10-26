@@ -23,9 +23,9 @@ const Pagina2 = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "form_react", ...this.state })
+      body: encode({ "form-name": "form_react", ...inputs })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Sucesso!"))
       .catch(error => alert(error));
   };
 
