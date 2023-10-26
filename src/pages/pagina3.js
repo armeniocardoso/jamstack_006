@@ -16,7 +16,7 @@ const Pagina3 = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "form_react_form", ...dados })
+      body: encode({ "form-name": "form_hook", ...dados })
     }).then(() => {
       alert("Em breve daremos um retorno do seu contato. Obrigado!");
       reset();
@@ -27,9 +27,9 @@ const Pagina3 = () => {
     <Layout>
       <h2>Entre em Contato:</h2>
       <div className="container">
-        <form method="post" onSubmit={handleSubmit(onSubmit)}
+        <form name="form_hook" method="post" onSubmit={handleSubmit(onSubmit)}
           data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="form_react_form" />
+          <input type="hidden" name="form-name" value="form_hook" />
           <label>
             Nome
             <input type="text" name="nome" {...register("nome", { required: true, maxLength: 20 })} />

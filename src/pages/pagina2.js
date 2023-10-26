@@ -34,7 +34,7 @@ const Pagina2 = () => {
     <Layout>
       <h2>Entre em Contato:</h2>
       <div className="container">
-        <form method="post" onSubmit={handleSubmit}
+        <form name="form_react" method="post" onSubmit={handleSubmit}
           data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="form_react" />
           <label>
